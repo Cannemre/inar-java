@@ -8,18 +8,13 @@ public class Question_03_27 {
         System.out.println(" Enter a point's x- and y- coordinates: ");
         double x = input.nextDouble();
         double y = input.nextDouble();
-        if (0 <= x && x <= 200) {
-            if (0 <= y && y <= 100) {
-                if (y <= 0.5 * x) {
-                    System.out.println(" The point is in the triangle ");
-                } else {
-                    System.out.println(" The point is not in the triangle ");
-                }
-            } else {
-                System.out.println(" The point is not in the triangle ");
-            }
+        if (y <= -x / 2 + 100 && x >= 0 && y >= 0) {
+            System.out.println(" The point is in the triangle ");
         } else {
             System.out.println(" The point is not in the triangle ");
         }
     }
 }
+
+
+
