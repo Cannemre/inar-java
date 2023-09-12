@@ -6,19 +6,11 @@ public class Question_05_19 {
             for (int j = (9 - i); j >= 1; j--) {
                 System.out.print("    ");
             }
-            for (int k = 1; k <= Math.pow(2, (i - 1)); ) {
-                if (k >= 8) {
-                    System.out.print(k + "  ");
-                } else {
-                    System.out.print(k + "   ");
-                }
-                k = k * 2;
+            for (int k = 1; k <= Math.pow(2, (i - 1)); k = k * 2) {
+                    System.out.printf("%4d", k);
             }
-            for (int l = (int) Math.pow(2, (i - 2)); l >= 1; ) {
-                if (i > 1) {
-                    System.out.print(l + "   ");
-                }
-                l = l / 2;
+            for (int l = (int) Math.pow(2, (i - 2)); l >= 1; l = l / 2) {
+                System.out.printf("%4d", l);
             }
             System.out.println();
         }
