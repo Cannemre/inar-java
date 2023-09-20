@@ -9,25 +9,25 @@ public class Question_05_09 {
         int numberOfStudents = input.nextInt();
         int max = 0;
         int secondMax = 0;
-        int tempScore = 0;
-        String name = "";
+        String maxName = "";
         String secondName = "";
         for (int i = 0; i < numberOfStudents; i++) {
+
             System.out.println("Student : " + (i + 1));
             System.out.print("   Name : ");
             String studentName = input.next();
             System.out.print("  Score : ");
             int score = input.nextInt();
-            if (score > tempScore) {
-                tempScore = score;
+            if (score > max) {
+                secondMax = max;
+                secondName = maxName;
+                max = score;
+                maxName = studentName;
+            } else if (score > secondMax) {
                 secondMax = score;
                 secondName = studentName;
             }
-            if (tempScore > max) {
-                max = tempScore;
-                name = studentName;
-            }
         }
-        System.out.println("The highest scoring student: " + name + "\nThe second highest scoring student: " + secondName);
+        System.out.println("The highest scoring student: " + maxName + "\nThe second highest scoring student: " + secondName);
     }
 }
