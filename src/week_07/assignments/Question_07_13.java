@@ -15,13 +15,15 @@ public class Question_07_13 {
 
     public static int getRandom(int... numbers) {
         int number = 0;
-        boolean result = false;
-        while (!result) {
-            number = (int) ((Math.random() * 54) + 1);
+        boolean result = true;
+        while (result) {
+            number = (int) ((Math.random() * 15) + 1);
             for (int j : numbers) {
-                result = false;
                 if (j != number) {
+                    result = false;
+                } else {
                     result = true;
+                    break;
                 }
             }
         }
