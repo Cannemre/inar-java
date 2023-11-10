@@ -12,11 +12,11 @@ public class Account {
 
     private final Date dateCreated;
 
-    Account() {
+    public Account() {
         dateCreated = new Date();
     }
 
-    Account(int id, double balance) {
+    public Account(int id, double balance) {
         dateCreated = new Date();
         this.id = id;
         this.balance = balance;
@@ -58,11 +58,11 @@ public class Account {
         return balance * getMonthlyInterestRate();
     }
 
-    void withdraw(double amount) {
+    public void withdraw(double amount) {
         this.balance -= amount;
     }
 
-    void deposit(double amount) {
+    public void deposit(double amount) {
         this.balance += amount;
     }
 
