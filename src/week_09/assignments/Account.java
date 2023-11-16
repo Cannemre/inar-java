@@ -50,11 +50,11 @@ public class Account {
         return dateCreated;
     }
 
-    double getMonthlyInterestRate() {
+    public double getMonthlyInterestRate() {
         return annualInterestRate / 12;
     }
 
-    double getMonthlyInterest() {
+    public double getMonthlyInterest() {
         return balance * getMonthlyInterestRate();
     }
 
@@ -66,7 +66,7 @@ public class Account {
         this.balance += amount;
     }
 
-    void displayAccountStatement(Account member) {
+    public void displayAccountStatement(Account member) {
         System.out.println("\t\t\tAccount Statement :");
         System.out.println("------------------------------------------------");
         System.out.println("Account ID       : " + member.getId());

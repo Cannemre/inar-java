@@ -7,7 +7,7 @@ public class MyDate {
     int month;
     int day;
 
-    MyDate() {
+    public MyDate() {
         GregorianCalendar date = new GregorianCalendar();
         date.setTimeInMillis(System.currentTimeMillis());
         this.year = date.get(GregorianCalendar.YEAR);
@@ -15,7 +15,7 @@ public class MyDate {
         this.day = date.get(GregorianCalendar.DAY_OF_MONTH);
     }
 
-    MyDate(long elapsedTime) {
+    public MyDate(long elapsedTime) {
         GregorianCalendar date = new GregorianCalendar();
         date.setTimeInMillis(elapsedTime);
         this.year = date.get(GregorianCalendar.YEAR);
@@ -47,5 +47,8 @@ public class MyDate {
         this.year = date.get(GregorianCalendar.YEAR);
         this.month = date.get(GregorianCalendar.MONTH) + 1;
         this.day = date.get(GregorianCalendar.DAY_OF_MONTH);
+    }
+    public String toString() {
+        return day + "." + month + "." + year;
     }
 }
